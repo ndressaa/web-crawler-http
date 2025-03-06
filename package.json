@@ -1,0 +1,15 @@
+{
+  "name": "web-crawler-http",
+  "version": "1.0.0",
+  "description": "A command line application that crawls a website and produces a report of the linking structure of the website",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
