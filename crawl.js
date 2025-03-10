@@ -3,6 +3,17 @@ const { JSDOM } = require("jsdom");
 async function crawlPage(url) {
   try {
     const response = await fetch(url);
+    if (response.status > 399) {
+      console.log(`Failed to fetch ${url}. Error ${response.status}.`);
+      return;
+    }
+
+    const contentType = response.headers.get("content-type");
+    if (!contentType.includes("text/html")) {
+      console.log(`${url} is not an HTML page.`);
+      return;
+    }
+
     const body = await response.text();
     console.log(body);
   } catch (err) {
