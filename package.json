@@ -4,7 +4,7 @@
   "description": "A command line application that crawls a website and produces a report of the linking structure of the website",
   "main": "main.js",
   "scripts": {
-    "start": "node main.js",
+    "start": "node --no-warnings main.js",
     "test": "jest"
   },
   "author": "",
